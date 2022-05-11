@@ -1,0 +1,114 @@
+@import "maps";
+@import "globals";
+ 
+.log__navbar{
+    @include center;
+    padding: 0.8em 0;
+}
+.form__login-body{
+    background: url('../img/chapa.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    filter: grayscale(50%);
+    text-align: center;
+    height: 90vh;
+    @include center;
+}
+.form__register{
+    @include center;
+    flex-direction: column;
+
+}
+.log__title{
+    font-size: $h2;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    margin-bottom: 3rem;
+}
+.container{
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    background: whitesmoke;
+    @include round-corners;
+    flex-direction: column;
+    text-align: center;
+    
+    input[type="text"],
+    input[type="password"]
+    {
+        font-size: 20px;
+        width: 82%;
+        padding: 10px;
+        border: none;
+}
+}
+input[type="date"]{
+    font-size: 20px;
+    width: 82%;
+    padding: 10px;
+    border: none;
+}
+input[type="checkbox"],
+label
+{
+    width: 82%;
+    font-size: 20px;
+    padding: 50px;
+}
+.input__container{
+    margin-bottom: 1rem;
+    border-bottom: 2px solid map-get($backgroundColors, content-2 );
+}
+.log__btn{
+    background: map-get($backgroundColors, main);
+    @include round-corners;
+    border: transparent;
+    margin-bottom: 1.5rem;
+    padding: 0.8em 1em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: rgb(249, 250, 250);
+    letter-spacing: 1.5px;
+    transition: 0.5s all;
+    &:hover{
+        background: map-get($backgroundColors, hero );
+        color: #0f54c3;
+    }
+}
+.text__container{
+    @include center;
+    flex-direction: column;
+}
+.line{
+    border-bottom: 1.5px solid rgb(40, 40, 40);
+    width: 80%;
+    margin-bottom: 1.3rem;
+}
+.log__text{
+    text-align: center;
+    letter-spacing: 1.5px;
+    line-height: 2rem;
+    width: 70%;
+}
+.link{
+    text-decoration: none;
+    color: #0f54c3;
+    font-weight: 500;
+    text-decoration: underline;
+    margin: 0.4rem;
+}
+.link:hover{
+     color: cadetblue;
+}
+
+
+@media (min-width: 950px){
+    
+    .container{
+        padding-top: 2rem;
+    }
+    .log__title{
+        margin: 1rem;
+    }
+}

@@ -1,0 +1,62 @@
+$headings:(
+    h1: 3rem,
+    h2: 1.75rem,
+    h3: 1.4rem,
+    h4: 1rem,
+    p-1: 25px,
+    p-2: 20px,
+);
+$backgroundColors:(
+    hero: radial-gradient(#34a0a4,#1a759f),
+    main: #c87056,
+    nav: #bcb8b1,
+    card: #f4f3ee,
+    letters: #f7f7f7,
+    content: #61892f,
+    content-1: #70a329  ,
+    content-2: #474b4f,
+    btn: #13293d,
+    footer: #2d2a32,
+    b-bottom: #8ea06b,
+    a-hover: rgb(133, 86, 86),
+    mobile-bg-menu:#0069CC,
+);
+
+
+$combine:(
+    $headings,
+    $backgroundColors,
+);
+
+/* MIXINS */
+@mixin center(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin row-center(){
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+@mixin row-spacebetween(){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin column-center(){
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+@mixin link-decoration(){
+    text-decoration: none;
+    text-transform: uppercase;
+}
+@mixin shadow(){
+    box-shadow: 0 1px 2px rgba($color: #000000, $alpha: 0.5);
+}
+@mixin round-corners(){
+    border-radius: 1.3rem ;
+}
+

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tomas Millan">
+    <meta name="keywords" content="musica, sistema b, plataforma, colaborativa, isiuey, artistas, artistas emergentes, emergentes">
+    <meta name="description" content="Esta es una plataforma para aquellos que quieran escuchar y compartir su arte desde otro enforque, ayudando a generar un impacto social">
+ 
+    <!-- CSS -->
+     <link rel="stylesheet" href="../css/style.css">
+      <!-- Favicon -->
+      <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+      <link rel="manifest" href="/site.webmanifest">
+     <!-- GOOGLE FONTS -->
+     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,400;0,500;1,300&display=swap" rel="stylesheet">     
+     <!-- FontAwesome Icons -->
+     <script src="https://kit.fontawesome.com/e1cd5ca43b.js" crossorigin="anonymous"></script>
+     <!-- Animate CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+          <!-- Google Analytics -->
+     <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZM6887MFNX"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-ZM6887MFNX');
+    </script>
+    
+     <title>ISIUEY - Reproductor</title>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="../index.html" class="logo">
+                <h2>isiuey</h2>
+            </a>
+            <button class="open-menu">
+                <img src="../img/menu-pngrepo-com.png"  class="nav-img">
+            </button>
+            <ul class="menu">
+                <button class="close-menu"><img src="../img/close-pngrepo-com.png"  class="nav-img"></button>
+                <li><a href="../index.html">inicio</a></li>
+                <li><a href="player.html">reproductor</a></li>
+                <li><a href="../pages/mission.html">mision</a></li>
+                <li><a href="../pages/artist.html">artistas</a></li>
+                <li><a href="../pages/contact.html">contacto</a></li>
+            </ul>
+            <div class="log">
+                <a href="../pages/login.html" class="btn">iniciar sesion</a>
+                <a href="../pages/login.html" class="btn">registrarse</a>
+                <a href="../pages/login.html"><img src="../img/user.png" class="nav-img log-icon"></i></a>
+            </div>
+        </nav>
+    </header>
+  <section class="player">
+    
+            <!-- Define the section for displaying details -->
+            <div class="details">
+                <div class="now-playing">PLAYING x OF y</div>
+                <div class="track-art">
+                </div>
+                <div class="track-name">Track Name</div>
+                <div class="track-artist">Track Artist</div>
+                </div>
+            
+                <!-- Define the section for displaying track buttons -->
+                <div class="buttons">
+                <div class="prev-track" onclick="prevTrack()">
+                    <i class="fas fa-step-backward fa-2x"></i>
+                </div>
+                <div class="playpause-track" onclick="playpauseTrack()">
+                    <i class="fas fa-play-circle fa-5x"></i>
+                </div>
+                <div class="next-track" onclick="nextTrack()">
+                    <i class="fas fa-step-forward fa-2x"></i>
+                </div>
+                </div>
+            
+                <!-- Define the section for displaying the seek slider-->
+                <div class="slider_container">
+                <div class="current-time">00:00</div>
+                <input type="range" min="1" max="100"
+                    value="0" class="seek_slider" onchange="seekTo()">
+                <div class="total-duration">00:00</div>
+                </div>
+            
+                <!-- Define the section for displaying the volume slider-->
+                <div class="slider_container">
+                <i class="fa fa-volume-down"></i>
+                <input type="range" min="1" max="100"
+                    value="99" class="volume_slider" onchange="setVolume()">
+                <i class="fa fa-volume-up"></i>
+                </div>
+                
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6278913326224494"
+                 crossorigin="anonymous"></script>
+                
+  </section>
+    <footer class="footer">
+        <div class="col-5">
+            <h3 class="title">Menu</h3>
+            <ul class="menu-ft">
+                <li><a href="../index.html">inicio</a></li>
+                <li><a href="../pages/player.html">reproductor</a></li>
+                <li><a href="../pages/mission.html">mision</a></li>
+                <li><a href="../pages/artist.html">artistas</a></li>
+                <li><a href="../pages/contact.html">contacto</a></li>
+            </ul>
+        </div>
+        <div class="col-6">
+            <p class="text">Subscribite</p>
+            <form action="https://formsubmit.co/info@isiuey.org" method="post" class="subscribe">
+                <input type="text" name="mail" id="mail" placeholder="juan.rodriguez@isiuey.org" required>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+        <div class="col-7">
+            <h3 class="title">Redes Sociales</h3>
+            <a href="https://www.instagram.com/isiuey/"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+        </div>
+    </footer>
+    <div class="copy">
+        <h4>TML | 2022</h4>
+    </div>
+    <!-- JS Scripts -->
+    <script src="../js/menu.js"></script>
+    <script src="../js/webplayer.js"></script>
+    <script src="../js/jquery.playlist.js"></script>
+    <script src="../js/jquery.webplayer.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+@import "maps";
+
+/* Variables */
+$h1: map-get($headings, h1 );
+$h2: map-get($headings, h2 );
+$h3: map-get($headings, h3 );
+$h4: map-get($headings, h4 );
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Josefin Sans', sans-serif;
+}
+h1{
+    font-size: $h1;
+}
+h2{
+    font-size: $h2;
+}
+a{
+    @include link-decoration;
+}
+.btn{
+    background: map-get($backgroundColors, btn);
+    @include round-corners;
+    padding: 0.8em 1em;
+    transition: 0.5s all;
+    &:hover{
+        background: map-get($backgroundColors, a-hover );
+    }
+}
+.title{
+    font-size: $h3;
+    margin-bottom: 1rem;
+}
+.text{
+    line-height: 1.3;
+    margin-bottom: 1.3rem;
+}
